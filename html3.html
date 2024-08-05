@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculator</title>
+    <style>
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+        <h1>Factorial Calculator</h1>
+        <input type="number" id="factorialInput" placeholder="Enter a number">
+        <button onclick="calcfac()">Calculate</button>
+        <p id="result"></p>
+    <script>
+    function calcfac() {
+    let number = document.getElementById('factorialInput').value;
+    let factorial = 1;
+
+    for (let i = 1; i <= number; i++) {
+        factorial *= i;
+    }
+
+    document.getElementById('result').innerText = "The factorial of " + number + " is "+ factorial;
+}
+
+    </script>
+</body>
+</html>
